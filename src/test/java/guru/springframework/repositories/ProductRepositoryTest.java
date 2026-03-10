@@ -1,17 +1,14 @@
 package guru.springframework.repositories;
 
 import guru.springframework.domain.Product;
-import org.junit.Assert;
-import org.junit.Before;
-import org.junit.Test;
-import org.junit.runner.RunWith;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import java.math.BigDecimal;
 
-@RunWith(SpringJUnit4ClassRunner.class)
 @SpringBootTest
 public class ProductRepositoryTest {
 
@@ -22,7 +19,7 @@ public class ProductRepositoryTest {
     @Autowired
     private ProductRepository productRepository;
 
-    @Before
+    @BeforeEach
     public void setUp() throws Exception {
 
     }
@@ -39,11 +36,11 @@ public class ProductRepositoryTest {
         productRepository.save(product);
 
         //then
-        Assert.assertNotNull(product.getId());
+        Assertions.assertNotNull(product.getId());
         Product newProduct = productRepository.findById(product.getId()).orElse(null);
-        Assert.assertEquals((Long) 1L, newProduct.getId());
-        Assert.assertEquals(PRODUCT_DESCRIPTION, newProduct.getDescription());
-        Assert.assertEquals(BIG_DECIMAL_100.compareTo(newProduct.getPrice()), 0);
-        Assert.assertEquals(IMAGE_URL, newProduct.getImageUrl());
+        Assertions.assertEquals((Long) 1L, newProduct.getId());
+        Assertions.assertEquals(PRODUCT_DESCRIPTION, newProduct.getDescription());
+        Assertions.assertEquals(BIG_DECIMAL_100.compareTo(newProduct.getPrice()), 0);
+        Assertions.assertEquals(IMAGE_URL, newProduct.getImageUrl());
     }
 }
