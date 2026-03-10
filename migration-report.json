@@ -1,0 +1,39 @@
+{
+  "project_type": "spring-boot",
+  "spring_boot_version": "2.0.0.RELEASE",
+  "files_migrated": [
+    "pom.xml",
+    "src\\main\\resources\\application.properties",
+    "src\\main\\java\\guru\\springframework\\domain\\Product.java",
+    "src\\test\\java\\guru\\springframework\\SpringBootPostgreSQLApplicationTests.java",
+    "src\\test\\java\\guru\\springframework\\repositories\\ProductRepositoryTest.java",
+    "src\\main\\java\\guru\\springframework\\controllers\\ProductController.java"
+  ],
+  "files_skipped": [
+    "src\\main\\java\\guru\\springframework\\SpringBootPostgreSQLApplication.java",
+    "src\\main\\java\\guru\\springframework\\commands\\ProductForm.java",
+    "src\\main\\java\\guru\\springframework\\converters\\ProductFormToProduct.java",
+    "src\\main\\java\\guru\\springframework\\converters\\ProductToProductForm.java",
+    "src\\main\\java\\guru\\springframework\\repositories\\ProductRepository.java",
+    "src\\main\\java\\guru\\springframework\\services\\ProductService.java",
+    "src\\main\\java\\guru\\springframework\\services\\ProductServiceImpl.java"
+  ],
+  "files_failed": [],
+  "compilation": {
+    "status": "skipped",
+    "reason": "Maven step removed \u2014 AI-only migration"
+  },
+  "test_results": {
+    "status": "skipped",
+    "reason": "Maven step removed"
+  },
+  "summary": {
+    "total_files": 13,
+    "migrated": 6,
+    "skipped": 7,
+    "failed": 0,
+    "compilation": "skipped",
+    "tests_passed": 0,
+    "tests_failed": 0
+  }
+}
